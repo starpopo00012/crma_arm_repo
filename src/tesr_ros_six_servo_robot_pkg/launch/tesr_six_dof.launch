@@ -1,0 +1,12 @@
+<launch>
+	<!-- robot serial comport -->
+	<arg name="comport" doc="USB comport for robot 6 servos" default="/dev/ttyUSB0"/>
+	
+	<node name="tesr_ros_six_servo_robot" pkg="tesr_ros_six_servo_robot_pkg" type="tesr_six_dof_joint_control.py" output="screen">
+		<param name="robot_comport" type="str" value="$(arg comport)"/>
+	</node>
+	
+	<param name="robot_description" textfile="$(find tesr_ros_six_servo_robot_pkg)/urdf/six_servo.urdf"/>
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find tesr_ros_six_servo_robot_pkg)/rviz/tesr_urdf.rviz" launch-prefix="bash -c 'sleep 3.0; $0 $@'"/>
+</launch>

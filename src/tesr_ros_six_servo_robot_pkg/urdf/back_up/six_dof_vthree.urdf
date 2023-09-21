@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="six_dof_vthree">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.024694 0.018581 -0.0016056"
+        rpy="0 0 0" />
+      <mass
+        value="0.19977" />
+      <inertia
+        ixx="0.00021667"
+        ixy="-6.915E-05"
+        ixz="-1.4303E-06"
+        iyy="0.00066333"
+        iyz="-1.3232E-06"
+        izz="0.00056953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="-0.00018294 -0.00067148 -0.010104"
+        rpy="0 0 0" />
+      <mass
+        value="0.016244" />
+      <inertia
+        ixx="4.3344E-06"
+        ixy="-6.8318E-07"
+        ixz="3.7263E-07"
+        iyy="3.4552E-06"
+        iyz="-2.0145E-07"
+        izz="6.1023E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="-0.01 0.012 0.05175"
+      rpy="3.1416 0 -0.52" /> <!--rpy="3.1416 0 1.0695" /-->
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.00030577 -0.0082896 4.0228E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.03093" />
+      <inertia
+        ixx="1.6875E-06"
+        ixy="3.9477E-08"
+        ixz="8.0268E-13"
+        iyy="5.2032E-06"
+        iyz="-5.5581E-13"
+        izz="4.903E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="fixed">
+    <origin
+      xyz="-0.016812 0.0071743 -0.017792"
+      rpy="0 0 1.0713" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="-0.004182 0.051 -4.3715E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.049995" />
+      <inertia
+        ixx="2.134E-05"
+        ixy="-3.8211E-21"
+        ixz="-1.5525E-18"
+        iyy="3.0287E-05"
+        iyz="-3.1779E-15"
+        izz="4.6603E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="-0.01 0 0"
+      rpy="3.05432 0 1.5708" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.0097832 -0.0082336 4.3055E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.030816" />
+      <inertia
+        ixx="1.6871E-06"
+        ixy="3.9477E-08"
+        ixz="9.0364E-13"
+        iyy="5.2026E-06"
+        iyz="-6.1004E-13"
+        izz="4.9025E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0 0.102 0"
+      rpy="3.1416 -0.6981 1.5708" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.017447 0.0057451 0.012304"
+        rpy="0 0 0" />
+      <mass
+        value="0.021187" />
+      <inertia
+        ixx="5.9142E-06"
+        ixy="4.236E-07"
+        ixz="-5.2827E-11"
+        iyy="7.2085E-06"
+        iyz="3.3227E-07"
+        izz="3.809E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_5"
+    type="fixed">
+    <origin
+      xyz="0.031 -0.032 0.013292"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 -0.030497 -6.3079E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0078846" />
+      <inertia
+        ixx="2.8919E-06"
+        ixy="-1.6756E-21"
+        ixz="-1.3442E-24"
+        iyy="2.2554E-07"
+        iyz="1.7249E-22"
+        izz="2.8919E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.8 0.8 0.8 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_6"
+    type="fixed">
+    <origin
+      xyz="0.025217 0.0139 -0.013799"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_7">
+    <inertial>
+      <origin
+        xyz="0.028032 0.0047299 -0.0077781"
+        rpy="0 0 0" />
+      <mass
+        value="0.021187" />
+      <inertia
+        ixx="3.809E-06"
+        ixy="5.2827E-11"
+        ixz="-3.2899E-07"
+        iyy="5.9142E-06"
+        iyz="-4.236E-07"
+        izz="7.2085E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_7"
+    type="fixed">
+    <origin
+      xyz="0.016 -0.059015 0.0125"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="link_6" />
+    <child
+      link="link_7" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_8">
+    <inertial>
+      <origin
+        xyz="-0.000216828113527717 -0.00823361941068958 4.30062174761048E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.0308161398251486" />
+      <inertia
+        ixx="1.68714358570622E-06"
+        ixy="3.94774683741194E-08"
+        ixz="9.02243960309693E-13"
+        iyy="5.2025774371148E-06"
+        iyz="-6.09807048470312E-13"
+        izz="4.9025002529183E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_8.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_8.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_8"
+    type="fixed">
+    <origin
+      xyz="0.036754 0.019283 -0.015292"
+      rpy="3.1416 0 -3.1416" />
+    <parent
+      link="link_7" />
+    <child
+      link="link_8" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_9">
+    <inertial>
+      <origin
+        xyz="-0.00351339256501729 -0.0220824494550131 0.00311970106198312"
+        rpy="0 0 0" />
+      <mass
+        value="0.0208710938956787" />
+      <inertia
+        ixx="2.0338815288266E-05"
+        ixy="-9.52656162447708E-07"
+        ixz="-1.11638519066613E-10"
+        iyy="1.44907793466079E-05"
+        iyz="-6.98722629147494E-10"
+        izz="8.3722165314364E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_9.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_9.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_9"
+    type="revolute">
+    <origin
+      xyz="-0.01 0 0"
+      rpy="1.5708 -1.13446 0" />
+    <parent
+      link="link_8" />
+    <child
+      link="link_9" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_10">
+    <inertial>
+      <origin
+        xyz="-0.0002168280519851 -0.00823361951667059 4.41184394572858E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.030816139430284" />
+      <inertia
+        ixx="1.687143637864E-06"
+        ixy="3.94774699970568E-08"
+        ixz="9.23313678770479E-13"
+        iyy="5.2025773326752E-06"
+        iyz="-6.08644339845992E-13"
+        izz="4.9025001142284E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_10.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.7 0.7 0.7 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_10.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_10"
+    type="fixed">
+    <origin
+      xyz="-0.0080654 -0.050358 0.0055"
+      rpy="2.9835 1.5708 0" />
+    <parent
+      link="link_9" />
+    <child
+      link="link_10" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link_11">
+    <inertial>
+      <origin
+        xyz="-0.0179796830430524 0.0176119337980501 -0.0276487816012455"
+        rpy="0 0 0" />
+      <mass
+        value="0.0394323641558575" />
+      <inertia
+        ixx="2.3493041489984E-06"
+        ixy="2.79264066382846E-07"
+        ixz="8.77932216619499E-09"
+        iyy="7.25682088953817E-06"
+        iyz="-6.63070840397994E-10"
+        izz="6.54663315578873E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_11.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_11.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_11"
+    type="revolute">
+    <origin
+      xyz="-0.01 0.015896 0"
+      rpy="-1.5708 1.5708 -3.1416" />
+    <parent
+      link="link_10" />
+    <child
+      link="link_11" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_12_1">
+    <inertial>
+      <origin
+        xyz="0.000111818837647881 -0.00276320253830744 0.00446257533240041"
+        rpy="0 0 0" />
+      <mass
+        value="0.00341955118879606" />
+      <inertia
+        ixx="2.65564690155204E-07"
+        ixy="-4.91339632043252E-09"
+        ixz="9.40271711925512E-23"
+        iyy="9.83115433738288E-08"
+        iyz="-1.92532749920253E-22"
+        izz="3.58855211908907E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_12_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_12_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joitn_12_1"
+    type="revolute">
+    <origin
+      xyz="-0.013061 0.00053714 -0.030854"
+      rpy="1.5708 1.0128 -0.041103" />
+    <parent
+      link="link_11" />
+    <child
+      link="link_12_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_13_1">
+    <inertial>
+      <origin
+        xyz="-0.00629539510608565 0.0227381038998286 0.00841717476312126"
+        rpy="0 0 0" />
+      <mass
+        value="0.00148390327012937" />
+      <inertia
+        ixx="4.34064262982202E-07"
+        ixy="7.40371580775276E-08"
+        ixz="2.016252743098E-24"
+        iyy="2.90889864815549E-08"
+        iyz="-8.94986804562501E-23"
+        izz="4.60927394558563E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_13_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_13_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_13_1"
+    type="revolute">
+    <origin
+      xyz="-0.00019564 -0.031049 3.2825E-05"
+      rpy="0 0 -2.099" />
+    <parent
+      link="link_12_1" />
+    <child
+      link="link_13_1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_12_2">
+    <inertial>
+      <origin
+        xyz="0.00026689410687139 -0.00650128014864475 -0.00811666203769354"
+        rpy="0 0 0" />
+      <mass
+        value="0.00145339261018611" />
+      <inertia
+        ixx="2.1583788124175E-07"
+        ixy="-4.87149989419953E-09"
+        ixz="-4.13913423703292E-23"
+        iyy="4.7207621717766E-08"
+        iyz="-1.40052017462884E-22"
+        izz="2.62001176329039E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_12_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_12_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_12_2"
+    type="revolute">
+    <origin
+      xyz="0.01407 0.0014175 -0.030854"
+      rpy="1.5708 1.1996 3.1005" />
+    <parent
+      link="link_11" />
+    <child
+      link="link_12_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_13_2">
+    <inertial>
+      <origin
+        xyz="-0.0062954 0.022738 -0.0084837"
+        rpy="0 0 0" />
+      <mass
+        value="0.0014839" />
+      <inertia
+        ixx="4.3406E-07"
+        ixy="7.4037E-08"
+        ixz="1.277E-22"
+        iyy="2.9089E-08"
+        iyz="-6.4044E-22"
+        izz="4.6093E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_13_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.4 0.4 0.4 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tesr_ros_six_servo_robot_pkg/meshes/link_13_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_13_2"
+    type="revolute">
+    <origin
+      xyz="-0.00019564 -0.031049 -0.0022108"
+      rpy="0 0 -1.939" />
+    <parent
+      link="link_12_2" />
+    <child
+      link="link_13_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

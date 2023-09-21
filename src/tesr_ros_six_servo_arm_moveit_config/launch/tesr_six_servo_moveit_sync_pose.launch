@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+	<include file="$(find tesr_ros_six_servo_arm_moveit_config)/launch/demo.launch"/>
+	<node name="tesr_ros_six_servo_arm_moveit_config" pkg="tesr_ros_six_servo_arm_moveit_config" type="tesr_ros_moveit_to_six_servoarm.py"/>
+</launch>

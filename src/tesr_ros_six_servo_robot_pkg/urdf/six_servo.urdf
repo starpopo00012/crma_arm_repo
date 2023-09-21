@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="six_servo">
+    <link name="base_link">
+        <!--inertial>
+            <origin xyz="-0.018875 0.0012578 0.021854" rpy="0 0 0" />
+            <mass value="0.19205" />
+            <inertia ixx="0.00016092" ixy="2.2769E-06" ixz="-1.8938E-05" iyy="0.00040613" iyz="2.3218E-07" izz="0.0005467" />
+        </inertial-->
+        <visual>
+            <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/base_link.dae" scale="6.5 5 6.5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.79216 0.81961 0.93333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/base_link.dae" scale="6.5 5 6.5"/>
+            </geometry>
+        </collision>
+    </link>
+    <link name="link1">
+        <inertial>
+            <origin xyz="0.019845 -0.018933 -0.01119" rpy="0 0 0" />
+            <mass value="0.045014" />
+            <inertia ixx="4.7182E-06" ixy="3.953E-08" ixz="1.6436E-09" iyy="9.8584E-06" iyz="-4.236E-07" izz="1.0906E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link1.STL" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.15 0.15 0.15 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link1.STL" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint1" type="revolute">
+        <!--0.0076655 -0.05 -0.014602-->
+        <origin xyz="0 0 0.255" rpy="-3.14 0 1.5708" />
+        <parent link="base_link" />
+        <child link="link1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.1416" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link2">
+        <inertial>
+            <origin xyz="-9.6446E-05 -0.051 0.011223" rpy="0 0 0" />
+            <mass value="0.049995" />
+            <inertia ixx="4.6603E-05" ixy="-3.0854E-08" ixz="-1.1117E-20" iyy="3.0288E-05" iyz="-5.5477E-21" izz="2.134E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link2.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link2.dae" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint2" type="revolute">
+        <origin xyz="0.05 0 -0.066460" rpy="1.5708 1.5708 0" />
+        <parent link="link1" />
+        <child link="link2" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.1416" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link3">
+        <inertial>
+            <origin xyz="0.07528 -0.018025 0.002122" rpy="0 0 0" />
+            <mass value="0.11189" />
+            <inertia ixx="1.1218E-05" ixy="1.0566E-10" ixz="3.2873E-09" iyy="2.5125E-05" iyz="-8.4719E-07" izz="2.7114E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link3.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link3.dae" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint3" type="revolute">
+        <origin xyz="-0.00096445 -0.510 0" rpy="-1.5708 0 0.7538" />
+        <parent link="link2" />
+        <child link="link3" />
+        <axis xyz="0 1 0" />
+        <limit lower="0" upper="3.1416" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link4">
+        <inertial>
+            <origin xyz="-0.012388 0.035123 1.8331E-05" rpy="0 0 0" />
+            <mass value="0.051687" />
+            <inertia ixx="1.0059E-05" ixy="3.877E-08" ixz="6.0397E-13" iyy="1.9542E-05" iyz="3.8857E-09" izz="2.5393E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link4.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link4.dae" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint4" type="revolute">
+        <origin xyz="0.75285 0 0" rpy="0.8844 0 1.5708" />
+        <parent link="link3" />
+        <child link="link4" />
+        <axis xyz="1 0 0" />
+        <limit lower="0" upper="3.1416" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link5">
+        <inertial>
+            <origin xyz="-0.016771 -0.019023 -0.026447" rpy="0 0 0" />
+            <mass value="0.039432" />
+            <inertia ixx="7.2715E-06" ixy="-7.6833E-08" ixz="3.0175E-10" iyy="2.3347E-06" iyz="8.7991E-09" izz="6.5466E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link5.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link5.dae" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint5" type="revolute">
+        <origin xyz="-0.11625 0.334020 17.8725E-05" rpy="-1.5708 3.1464 3.1416" />
+        <parent link="link4" />
+        <child link="link5" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="3.1416" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link6_1">
+        <inertial>
+            <origin xyz="0.00011182 -0.0027632 0.0047626" rpy="0 0 0" />
+            <mass value="0.0034196" />
+            <inertia ixx="2.6556E-07" ixy="-4.9134E-09" ixz="9.2644E-23" iyy="9.8312E-08" iyz="3.4328E-22" izz="3.5886E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link6_1.dae" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link6_1.dae" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint6_1" type="revolute">
+        <origin xyz="0 -0.0675 -0.147855" rpy="1.5708 0.98921 1.5708" />
+        <parent link="link5" />
+        <child link="link6_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0.9599" effort="2000" velocity="6.28" />
+    </joint>
+    <link name="link7_1">
+        <inertial>
+            <origin xyz="-0.0062954 0.022738 0.014232" rpy="0 0 0" />
+            <mass value="0.0014839" />
+            <inertia ixx="4.3406E-07" ixy="7.4037E-08" ixz="7.9409E-23" iyy="2.9089E-08" iyz="-4.0739E-22" izz="4.6093E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link7_1.STL" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link7_1.STL" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint7_1" type="continuous">
+        <origin xyz="-0.00097820 -0.155245 -0.052410" rpy="0 0 -2.2378" />
+        <parent link="link6_1" />
+        <child link="link7_1" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0" effort="2000" velocity="6.28" />
+        <mimic joint="joint6_1" multiplier="-1" offset="0.0873" />
+    </joint>
+    <link name="link6_2">
+        <inertial>
+            <origin xyz="0.00026689 -0.0065013 -0.011645" rpy="0 0 0" />
+            <mass value="0.0014534" />
+            <inertia ixx="2.1584E-07" ixy="-4.8715E-09" ixz="2.9779E-23" iyy="4.7208E-08" iyz="2.068E-23" izz="2.62E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link6_2.STL" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link6_2.STL" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint6_2" type="continuous">
+        <origin xyz="-0.0271135 0.070 -0.149730" rpy="1.5708 1.1052 -1.5708" />
+        <parent link="link5" />
+        <child link="link6_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0" effort="2000" velocity="6.28" />
+        <mimic joint="joint6_1" multiplier="1" offset="0" />
+    </joint>
+    <link name="link7_2">
+        <inertial>
+            <origin xyz="-0.0062954 0.022738 -0.01465" rpy="0 0 0" />
+            <mass value="0.0014839" />
+            <inertia ixx="4.3406E-07" ixy="7.4037E-08" ixz="-2.068E-23" iyy="2.9089E-08" iyz="-3.3294E-23" izz="4.6093E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link7_2.STL" scale="5 5 5"/>
+            </geometry>
+            <material name="">
+                <color rgba="0.1 0.1 0.1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://six_servo/meshes/link7_2.STL" scale="5 5 5"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="joint7_2" type="continuous">
+        <origin xyz="-0.00097820 -0.155245 0.027135" rpy="0 0 -2.3584" />
+        <parent link="link6_2" />
+        <child link="link7_2" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0" effort="2000" velocity="6.28" />
+        <mimic joint="joint7_1" multiplier="1" offset="0.2618" />
+    </joint>
+    <transmission name="trans_joint1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint3_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint4">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint4_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint5">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint5_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint6_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint6_1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint7_1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint7_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint7_1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint6_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint6_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint6_2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_joint7_2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint7_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint7_2_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

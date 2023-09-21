@@ -1,0 +1,7 @@
+<launch>
+    <arg name="model"/>
+    <param name="robot_description" textfile="$(find tesr_ros_six_servo_robot_pkg)/urdf/six_servo.urdf"/>
+    <node name="tesr_ros_six_servo_robot_pkg" pkg="tesr_ros_six_servo_robot_pkg" type="tesr_six_dof_joint_control_simulation.py"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find tesr_ros_six_servo_robot_pkg)/rviz/tesr_urdf.rviz" launch-prefix="bash -c 'sleep 5.0; $0 $@'"/>
+</launch>

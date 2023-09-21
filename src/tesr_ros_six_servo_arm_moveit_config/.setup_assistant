@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: six_servo
+    relative_path: urdf/six_servo.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/six_servo.srdf
+  CONFIG:
+    author_name: rengy
+    author_email: rengy@email.com
+    generated_timestamp: 1693361518
